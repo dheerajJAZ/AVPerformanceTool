@@ -125,7 +125,7 @@ public class FileOpening {
 						option.setApplicationPath(filename);
 						long start = System.currentTimeMillis();
 						driver=new WiniumDriver(new URL("http://localhost:9999"),option);
-						WebDriverWait wait = new WebDriverWait(driver,1300);
+						WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(1300));
 						aboutMe= wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("File Tab")));
 						long finish = System.currentTimeMillis();
 						long totalTime = finish - start;
